@@ -2,20 +2,11 @@ import csv
 from collections import deque
 from elasticsearch import helpers
 import utils.elastic_client as elastic
-
-def read_movies():
-	csvfile = open('../datasets/movielens/ml-latest-small/movies.csv', 'r', encoding="utf-8")
-	reader = csv.DictReader(csvfile)
-	title_lookup = {}
-	for movie in reader:
-		title_lookup[movie['movieId']] = movie['title']
-
-	return title_lookup
-
+import datasets.movielens.movies as movies
 
 def read_ratings():
 	csvfile = open('../datasets/movielens/ml-latest-small/ratings.csv', 'r', encoding="utf-8")
-	title_lookup = read_movies()
+	title_lookup = movies.read()
 	reader = csv.DictReader(csvfile)
 
 	for line in reader:
