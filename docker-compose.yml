@@ -160,8 +160,8 @@ services:
     volumes:
       - certs:/usr/share/logstash/certs
       - logstashdata01:/usr/share/logstash/data
-      - "./logstash_ingest_data/:/usr/share/logstash/ingest_data/"
-      - "./logstash.conf:/usr/share/logstash/pipeline/logstash.conf:ro"
+      - "./logstash/data/:/usr/share/logstash/ingest_data/"
+      - "./logstash/logstash.conf:/usr/share/logstash/pipeline/logstash.conf:ro"
     environment:
       - xpack.monitoring.enabled=false
       - ELASTIC_USER=elastic
