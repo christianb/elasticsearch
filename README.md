@@ -15,3 +15,4 @@ Use `docker compose up` to build the images and run the containers.
 
 ## References
 - [Getting started with the Elastic Stack and Docker Compose: Part 1](https://www.elastic.co/blog/getting-started-with-the-elastic-stack-and-docker-compose)
+- [GitHub: elastic-stack-docker-part-one](https://github.com/elkninja/elastic-stack-docker-part-one)
